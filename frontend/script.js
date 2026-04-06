@@ -53,38 +53,6 @@ const api = {
   }
 };
 
-const theme = {
-  storageKey: "owiTheme",
-  media: window.matchMedia("(prefers-color-scheme: dark)"),
-  current() {
-    return document.body.dataset.theme || "dark";
-  },
-  preferred() {
-    const saved = localStorage.getItem(this.storageKey);
-    if (saved === "dark" || saved === "light") {
-      return saved;
-    }
-    return this.media.matches ? "dark" : "light";
-  },
-  apply(mode) {
-    document.body.dataset.theme = mode;
-    const toggle = document.getElementById("themeToggle");
-    if (toggle) {
-      toggle.setAttribute("aria-pressed", String(mode === "dark"));
-      toggle.setAttribute("aria-label", `Switch to ${mode === "dark" ? "light" : "dark"} mode`);
-      toggle.textContent = mode === "dark" ? "Light" : "Dark";
-      toggle.title = `Switch to ${mode === "dark" ? "light" : "dark"} mode`;
-    }
-  },
-  save(mode) {
-    localStorage.setItem(this.storageKey, mode);
-    this.apply(mode);
-  },
-  toggle() {
-    this.save(this.current() === "dark" ? "light" : "dark");
-  }
-};
-
 // Lightweight backend ping:
 // - useful for waking sleeping free-tier backends
 // - helps us warn early before login/register/contact requests
@@ -178,26 +146,6 @@ function setNavState() {
     authStatus.textContent = `Logged in as ${user.fullName}. You can continue to your dashboard or invest from a package card.`;
     authStatus.classList.remove("hidden");
   }
-}
-
-function setupThemeToggle() {
-  const navActions = document.querySelector(".nav-actions");
-  if (!navActions || document.getElementById("themeToggle")) return;
-
-  const themeToggle = document.createElement("button");
-  themeToggle.type = "button";
-  themeToggle.id = "themeToggle";
-  themeToggle.className = "theme-toggle";
-  themeToggle.addEventListener("click", () => theme.toggle());
-
-  const menuToggleButton = document.getElementById("menuToggle");
-  if (menuToggleButton) {
-    navActions.insertBefore(themeToggle, menuToggleButton);
-  } else {
-    navActions.appendChild(themeToggle);
-  }
-
-  theme.apply(theme.preferred());
 }
 
 const menuToggle = document.getElementById("menuToggle");
@@ -453,13 +401,6 @@ document.getElementById("loginForm")?.addEventListener("submit", async event => 
   }
 });
 
-setupThemeToggle();
 setupActiveNavigation();
 setNavState();
 testBackendConnection();
-
-theme.media.addEventListener("change", event => {
-  if (!localStorage.getItem(theme.storageKey)) {
-    theme.apply(event.matches ? "dark" : "light");
-  }
-});
