@@ -1,0 +1,38 @@
+[
+  {
+    "id": "investment_demo_001",
+    "userId": "user_demo_001",
+    "packageId": "B",
+    "packageSelected": "Balanced Growth",
+    "investmentAmount": 14000,
+    "estimatedReturns": 20625,
+    "startDate": "2026-03-05T09:00:00.000Z",
+    "endDate": "2026-08-05T09:00:00.000Z",
+    "paymentMethod": "GCash",
+    "accountStatus": "Active"
+  },
+  {
+    "id": "investment_demo_002",
+    "userId": "user_demo_001",
+    "packageId": "A",
+    "packageSelected": "Starter Growth",
+    "investmentAmount": 7000,
+    "estimatedReturns": 9500,
+    "startDate": "2026-03-15T10:30:00.000Z",
+    "endDate": "2026-08-15T10:30:00.000Z",
+    "paymentMethod": "Cash Meet-up",
+    "accountStatus": "Active"
+  },
+  {
+    "id": "investment_demo_003",
+    "userId": "user_demo_002",
+    "packageId": "C",
+    "packageSelected": "Premium Growth",
+    "investmentAmount": 21000,
+    "estimatedReturns": 29625,
+    "startDate": "2026-03-20T14:15:00.000Z",
+    "endDate": "2026-08-20T14:15:00.000Z",
+    "paymentMethod": "GCash",
+    "accountStatus": "Active"
+  }
+]

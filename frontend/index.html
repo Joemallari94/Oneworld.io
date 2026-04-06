@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="One World Investment offers Filipino-friendly investment opportunities in coffee, gasoline, and jewelry businesses."
+  >
+  <title>One World Investment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a href="#home" class="brand">
+        <span class="brand-mark">OWI</span>
+        <span>
+          <strong>One World Investment</strong>
+          <small>Smart growth, Filipino-friendly</small>
+        </span>
+      </a>
+      <nav class="nav" id="navMenu">
+        <a href="#packages">Packages</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#sectors">Sectors</a>
+        <a href="#dashboard-preview">Dashboard</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="dashboard.html" class="text-btn hidden" id="dashboardLink">Dashboard</a>
+        <button class="text-btn modal-trigger" data-modal="loginModal" id="loginTrigger">Login</button>
+        <button class="primary-btn modal-trigger" data-modal="registerModal" id="registerTrigger">Register</button>
+        <button class="text-btn hidden" id="logoutButton" type="button">Logout</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Trusted business-backed opportunities</span>
+          <h1>Grow Your Future with One World Investment</h1>
+          <p class="hero-text">
+            Investment opportunities through coffee, gasoline, and jewelry businesses.
+            Built with a clear, modern experience for Filipino investors who want simple
+            numbers, visible opportunities, and approachable support.
+          </p>
+          <div class="hero-actions">
+            <a href="#packages" class="primary-btn">Start Investing</a>
+            <a href="#calculator" class="secondary-btn">Learn More</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-pill">
+              <strong class="counter" data-target="3">0</strong>
+              <span>Business sectors</span>
+            </div>
+            <div class="trust-pill">
+              <strong class="counter" data-target="30">0</strong>
+              <span>Total sample slots</span>
+            </div>
+            <div class="trust-pill">
+              <strong class="counter" data-target="5">0</strong>
+              <span>Month packages</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-panel reveal">
+          <div class="hero-card glass-card">
+            <div class="hero-card-header">
+              <span>Investment Snapshot</span>
+              <span class="status-dot">Live Preview</span>
+            </div>
+            <div class="hero-amount">&#8369;29,625</div>
+            <p>Projected return from our highest sample package after 5 months.</p>
+            <div class="mini-grid">
+              <article><span>Starting from</span><strong>&#8369;7,000</strong></article>
+              <article><span>Estimated gain</span><strong>Up to &#8369;8,625</strong></article>
+              <article><span>Payment methods</span><strong>GCash / Meet-up</strong></article>
+              <article><span>Designed for</span><strong>Modern Filipino investors</strong></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-us section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Why choose us?</span>
+          <h2>Simple, transparent, and business-focused</h2>
+          <p>
+            We present opportunities in clear peso values, easy-to-understand timelines,
+            and a polished experience that feels dependable from first visit to inquiry.
+          </p>
+        </div>
+        <div class="why-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon">01</div>
+            <h3>Visible package details</h3>
+            <p>Know the amount, duration, estimated return, and slot availability right away.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">02</div>
+            <h3>Filipino-friendly payments</h3>
+            <p>GCash and meet-up options make onboarding feel familiar and convenient.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">03</div>
+            <h3>Backed by real sectors</h3>
+            <p>Coffee, gasoline, and jewelry create a grounded story around the opportunities.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="packages section" id="packages">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Investment Packages</span>
+          <h2>Choose a package that matches your plan</h2>
+          <p>Interactive cards show estimated returns and remaining slots in real time.</p>
+        </div>
+        <div class="package-grid">
+          <article class="package-card reveal" data-package="A" data-amount="7000" data-duration="5" data-slots="10">
+            <div class="package-badge">Package A</div>
+            <h3>Starter Growth</h3>
+            <div class="price">&#8369;7,000</div>
+            <ul class="package-list">
+              <li>Returns: &#8369;9,500</li>
+              <li>Duration: 5 Months</li>
+              <li><span class="slots-label">Slots Available: 10</span></li>
+            </ul>
+            <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
+            <button class="primary-btn invest-btn" type="button">Invest Now</button>
+          </article>
+          <article class="package-card featured reveal" data-package="B" data-amount="14000" data-duration="5" data-slots="10">
+            <div class="package-badge">Most Popular</div>
+            <h3>Balanced Growth</h3>
+            <div class="price">&#8369;14,000</div>
+            <ul class="package-list">
+              <li>Returns: &#8369;20,625</li>
+              <li>Duration: 5 Months</li>
+              <li><span class="slots-label">Slots Available: 10</span></li>
+            </ul>
+            <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
+            <button class="primary-btn invest-btn" type="button">Invest Now</button>
+          </article>
+          <article class="package-card reveal" data-package="C" data-amount="21000" data-duration="5" data-slots="10">
+            <div class="package-badge">Package C</div>
+            <h3>Premium Growth</h3>
+            <div class="price">&#8369;21,000</div>
+            <ul class="package-list">
+              <li>Returns: &#8369;29,625</li>
+              <li>Duration: 5 Months</li>
+              <li><span class="slots-label">Slots Available: 10</span></li>
+            </ul>
+            <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
+            <button class="primary-btn invest-btn" type="button">Invest Now</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="calculator section" id="calculator">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Investment Calculator</span>
+          <h2>Estimate your possible return in pesos</h2>
+          <p>Adjust your amount and duration to see a live projection using the sample package yield.</p>
+        </div>
+        <div class="calculator-grid">
+          <form class="calculator-form reveal" id="calculatorForm">
+            <label for="investmentAmount">Investment Amount (PHP)</label>
+            <input type="number" id="investmentAmount" min="7000" step="500" value="14000">
+            <label for="investmentDuration">Duration (Months)</label>
+            <input type="range" id="investmentDuration" min="1" max="12" value="5">
+            <div class="range-value"><span id="durationValue">5</span> months</div>
+            <div class="calculator-note">
+              Example projections use a monthly yield rate based on the sample packages shown above.
+            </div>
+          </form>
+          <div class="calculator-results glass-card reveal">
+            <article><span>Estimated Return</span><strong id="estimatedReturn">&#8369;20,625</strong></article>
+            <article><span>Estimated Profit</span><strong id="estimatedProfit">&#8369;6,625</strong></article>
+            <article><span>Monthly Projection</span><strong id="monthlyProjection">&#8369;4,125 / month</strong></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectors section" id="sectors">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Business Sectors</span>
+          <h2>Opportunities anchored in everyday industries</h2>
+        </div>
+        <div class="sector-grid">
+          <article class="info-card reveal">
+            <div class="sector-icon">&#9749;</div>
+            <h3>Coffee Business</h3>
+            <p>Support fast-moving caf&eacute; and coffee retail opportunities tied to daily customer demand.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#9981;</div>
+            <h3>Gasoline Business</h3>
+            <p>Explore growth through fuel-related operations serving transport and logistics communities.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#128141;</div>
+            <h3>Jewelry Business</h3>
+            <p>Participate in elegant, high-value product ventures with strong gift and occasion appeal.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="trust-strip section">
+        <div class="trust-grid reveal">
+          <article>
+            <strong>Clear Peso Pricing</strong>
+            <span>All sample values shown in PHP for easy understanding.</span>
+          </article>
+          <article>
+            <strong>Friendly Support Style</strong>
+            <span>Designed to feel welcoming for first-time and returning investors.</span>
+          </article>
+          <article>
+            <strong>Responsive Experience</strong>
+            <span>Works smoothly on mobile, tablet, and desktop screens.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="payments section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Payment Methods</span>
+          <h2>Convenient options for local investors</h2>
+        </div>
+        <div class="payment-grid">
+          <article class="info-card reveal">
+            <div class="sector-icon">&#128241;</div>
+            <h3>GCash</h3>
+            <p>Fast and familiar digital payments for easy investment coordination and confirmation.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#129309;</div>
+            <h3>Cash Meet-up</h3>
+            <p>A more personal option for investors who prefer arranged, face-to-face transactions.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="dashboard section" id="dashboard-preview">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Investor Dashboard Preview</span>
+          <h2>A clean overview of your active portfolio</h2>
+        </div>
+        <div class="dashboard-preview reveal">
+          <div class="dashboard-top">
+            <article class="dashboard-metric"><span>Active Investments</span><strong>3</strong></article>
+            <article class="dashboard-metric"><span>Slots Used</span><strong>7 / 30</strong></article>
+            <article class="dashboard-metric"><span>Expected Return</span><strong>&#8369;59,750</strong></article>
+            <article class="dashboard-metric"><span>Time Remaining</span><strong>87 Days</strong></article>
+          </div>
+          <div class="dashboard-table">
+            <div class="table-head">
+              <span>Package</span><span>Amount</span><span>Status</span><span>Maturity</span>
+            </div>
+            <div class="table-row">
+              <span>Package A</span><span>&#8369;7,000</span><span class="tag green">Active</span><span>Jun 20</span>
+            </div>
+            <div class="table-row">
+              <span>Package B</span><span>&#8369;14,000</span><span class="tag gold">Running</span><span>Jul 04</span>
+            </div>
+            <div class="table-row">
+              <span>Package C</span><span>&#8369;21,000</span><span class="tag blue">Processing</span><span>Jul 18</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2>What interested investors might say</h2>
+        </div>
+        <div class="testimonial-slider reveal">
+          <button class="slider-btn" id="prevTestimonial" aria-label="Previous testimonial">&lsaquo;</button>
+          <div class="testimonial-track" id="testimonialTrack">
+            <article class="testimonial active">
+              <p>"The package details are easy to understand, and the peso calculator makes planning feel less intimidating."</p>
+              <strong>Mae, Quezon City</strong>
+            </article>
+            <article class="testimonial">
+              <p>"I like that the website feels modern but still straightforward. GCash and meet-up options feel practical."</p>
+              <strong>Joshua, Davao</strong>
+            </article>
+            <article class="testimonial">
+              <p>"The business sectors gave me a clearer idea of where the opportunities are connected."</p>
+              <strong>Angela, Cebu</strong>
+            </article>
+          </div>
+          <button class="slider-btn" id="nextTestimonial" aria-label="Next testimonial">&rsaquo;</button>
+        </div>
+      </section>
+
+      <section class="faq section" id="faq">
+        <div class="section-heading reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Common questions from investors</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>How does investment work?</summary>
+            <p>You choose a package, review the duration and projected return, then connect through the contact form or registration flow for next-step guidance.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How are returns calculated?</summary>
+            <p>Returns shown on this landing page are sample estimates based on package projections and used for demonstration purposes.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How do payments happen?</summary>
+            <p>Sample payment methods include GCash and arranged cash meet-up, depending on the setup preferred by both parties.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Are there risks?</summary>
+            <p>Yes. All investments involve uncertainty, so investors should review opportunities carefully and ask questions before committing.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="disclosure section" id="disclosure">
+        <div class="disclosure-card reveal">
+          <span class="eyebrow">Risk Disclosure</span>
+          <h2>Important reminder before investing</h2>
+          <p>All investments carry risks. Returns are estimates and not guaranteed.</p>
+        </div>
+      </section>
+
+      <section class="legal section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Legal & Trust Notes</span>
+          <h2>Important terms every investor should review</h2>
+          <p>These quick-reference sections make core policies easy to reach on any deployment.</p>
+        </div>
+        <div class="legal-grid">
+          <article class="legal-card reveal" id="terms">
+            <h3>Terms</h3>
+            <p>
+              Package details, timelines, communication flow, and onboarding steps shown on this website
+              are for information and screening purposes. Final investment participation should only proceed
+              after direct confirmation and review of updated business terms.
+            </p>
+          </article>
+          <article class="legal-card reveal" id="privacy">
+            <h3>Privacy Policy</h3>
+            <p>
+              Contact, registration, and dashboard data should be handled responsibly. For production use,
+              this starter should be connected to secure storage, strong secrets, and a proper privacy process
+              before collecting real investor information at scale.
+            </p>
+          </article>
+          <article class="legal-card reveal" id="investor-agreement">
+            <h3>Investor Agreement</h3>
+            <p>
+              Investors are expected to review package amounts, payment methods, estimated maturity dates,
+              and the business opportunity involved before committing. Participation should only continue when
+              the investor understands the projected return is not a guaranteed promise.
+            </p>
+          </article>
+          <article class="legal-card reveal" id="anti-fraud">
+            <h3>Anti-Fraud Disclaimer</h3>
+            <p>
+              Never send payments based only on screenshots, social posts, or unverified third parties.
+              Use official contact channels, verify account details carefully, and report suspicious activity
+              immediately before proceeding with any transaction.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Contact Us</span>
+          <h2>Let&rsquo;s talk about your next investment step</h2>
+          <p>Share your details and we&rsquo;ll make the next conversation simple and welcoming.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <div class="contact-card">
+              <strong>Office Style</strong>
+              <p>Professional, approachable, and ready to assist with investor questions.</p>
+            </div>
+            <div class="contact-card">
+              <strong>Preferred Contact</strong>
+              <p>Mobile-friendly communication for fast updates and coordinated follow-ups.</p>
+            </div>
+            <div class="status-panel hidden" id="authStatus"></div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="09XX XXX XXXX" required>
+            <small class="input-hint">Please enter a valid Philippine mobile number. Spaces and dashes are allowed.</small>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us the package or business sector you&rsquo;re interested in." required></textarea>
+            <button type="submit" class="primary-btn">Send Inquiry</button>
+            <div class="form-feedback hidden" id="contactFeedback"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>One World Investment</strong>
+        <p>Modern investment landing experience for coffee, gasoline, and jewelry opportunities.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">About</a>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#investor-agreement">Investor Agreement</a>
+        <a href="#anti-fraud">Anti-Fraud</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="loginModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-close-modal type="button">&times;</button>
+      <h3>Investor Login</h3>
+      <p>Sign in to manage your investments and open your dashboard.</p>
+      <form class="modal-form" id="loginForm">
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" placeholder="Enter your email" required>
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" name="password" type="password" placeholder="Enter your password" required>
+        <button type="submit" class="primary-btn">Login</button>
+        <div class="form-feedback hidden" id="loginFeedback"></div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal" aria-hidden="true">
+    <div class="modal-panel">
+      <button class="modal-close" data-close-modal type="button">&times;</button>
+      <h3>Create an Account</h3>
+      <p>Register to save your investor profile and continue to the real dashboard.</p>
+      <form class="modal-form" id="registerForm">
+        <label for="registerName">Full Name</label>
+        <input id="registerName" name="fullName" type="text" placeholder="Enter your full name" required>
+        <label for="registerMobile">Mobile Number</label>
+        <input id="registerMobile" name="mobile" type="tel" placeholder="09XX XXX XXXX" required>
+        <small class="input-hint">Please enter a valid Philippine mobile number. Spaces and dashes are allowed.</small>
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" name="email" type="email" placeholder="Enter your email" required>
+        <label for="registerPassword">Password</label>
+        <input id="registerPassword" name="password" type="password" placeholder="Create a password" required>
+        <button type="submit" class="primary-btn">Register</button>
+        <div class="form-feedback hidden" id="registerFeedback"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

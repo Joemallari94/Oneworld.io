@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Dashboard | One World Investment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="dashboard-shell">
+    <aside class="sidebar">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">OWI</span>
+        <span>
+          <strong>One World Investment</strong>
+          <small>Investor dashboard</small>
+        </span>
+      </a>
+      <div class="sidebar-card">
+        <span class="eyebrow">Account</span>
+        <h2 id="welcomeName">Welcome back</h2>
+        <p id="accountMeta">Loading your investor profile...</p>
+      </div>
+      <button class="ghost-btn" id="logoutButton" type="button">Logout</button>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="dashboard-header">
+        <div>
+          <span class="eyebrow">Real Investor Dashboard</span>
+          <h1>Track your investments in one place</h1>
+        </div>
+        <a href="index.html" class="ghost-btn">Back to Website</a>
+      </header>
+
+      <section class="summary-grid" id="summaryGrid">
+        <article class="summary-card">
+          <span>Active Investments</span>
+          <strong id="summaryCount">0</strong>
+        </article>
+        <article class="summary-card">
+          <span>Total Amount</span>
+          <strong id="summaryAmount">&#8369;0</strong>
+        </article>
+        <article class="summary-card">
+          <span>Estimated Returns</span>
+          <strong id="summaryReturns">&#8369;0</strong>
+        </article>
+        <article class="summary-card">
+          <span>Account Status</span>
+          <strong id="summaryStatus">Active</strong>
+        </article>
+      </section>
+
+      <section class="panel-grid">
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">New Investment</span>
+              <h2>Create a package entry</h2>
+            </div>
+          </div>
+          <form id="investmentForm" class="investment-form">
+            <label for="packageId">Package</label>
+            <select id="packageId" name="packageId" required>
+              <option value="">Select a package</option>
+            </select>
+
+            <label for="paymentMethod">Payment Method</label>
+            <select id="paymentMethod" name="paymentMethod" required>
+              <option value="GCash">GCash</option>
+              <option value="Cash Meet-up">Cash Meet-up</option>
+            </select>
+
+            <button type="submit" class="primary-btn">Save Investment</button>
+            <div class="feedback hidden" id="investmentFeedback"></div>
+          </form>
+        </section>
+
+        <section class="panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">Live Tracking</span>
+              <h2>Your package timeline</h2>
+            </div>
+          </div>
+          <div id="investmentCards" class="investment-cards"></div>
+          <div id="emptyState" class="empty-state hidden">
+            No investments saved yet. Choose a package to begin tracking.
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
