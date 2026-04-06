@@ -133,6 +133,38 @@ function clearFeedback(element) {
   element.classList.remove("success", "error");
 }
 
+function setupActiveNavigation() {
+  const sectionIds = ["home", "trust", "sectors", "packages", "calculator", "proof", "faq", "contact"];
+  const links = sectionIds
+    .map(id => ({ id, link: document.querySelector(`.nav a[href="#${id}"]`) }))
+    .filter(item => item.link);
+
+  if (!links.length) return;
+
+  const sectionObserver = new IntersectionObserver(
+    entries => {
+      const visible = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+
+      if (!visible) return;
+
+      links.forEach(item => {
+        item.link.classList.toggle("active", item.id === visible.target.id);
+      });
+    },
+    {
+      threshold: [0.25, 0.5, 0.7],
+      rootMargin: "-25% 0px -45% 0px"
+    }
+  );
+
+  sectionIds.forEach(id => {
+    const section = document.getElementById(id);
+    if (section) sectionObserver.observe(section);
+  });
+}
+
 function setNavState() {
   // Toggle navigation actions based on whether the visitor is logged in.
   const user = auth.user();
@@ -422,6 +454,7 @@ document.getElementById("loginForm")?.addEventListener("submit", async event => 
 });
 
 setupThemeToggle();
+setupActiveNavigation();
 setNavState();
 testBackendConnection();
 

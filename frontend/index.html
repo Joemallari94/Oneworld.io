@@ -27,10 +27,12 @@
         </span>
       </a>
       <nav class="nav" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#trust">Trust</a>
+        <a href="#sectors">Sectors</a>
         <a href="#packages">Packages</a>
         <a href="#calculator">Calculator</a>
-        <a href="#sectors">Sectors</a>
-        <a href="#dashboard-preview">Dashboard</a>
+        <a href="#proof">Proof</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -49,11 +51,10 @@
       <section class="hero section" id="home">
         <div class="hero-copy reveal">
           <span class="eyebrow">Trusted business-backed opportunities</span>
-          <h1>Grow Your Future with One World Investment</h1>
+          <h1>Grow your money with real business-backed opportunities</h1>
           <p class="hero-text">
-            Investment opportunities through coffee, gasoline, and jewelry businesses.
-            Built with a clear, modern experience for Filipino investors who want simple
-            numbers, visible opportunities, and approachable support.
+            Explore simple investment options connected to coffee, gasoline, and jewelry
+            businesses, with clear peso-based figures and guided support for Filipino investors.
           </p>
           <div class="hero-actions">
             <a href="#packages" class="primary-btn">Start Investing</a>
@@ -72,6 +73,11 @@
               <strong class="counter" data-target="5">0</strong>
               <span>Month packages</span>
             </div>
+          </div>
+          <div class="hero-badges">
+            <span class="hero-badge">Clear PHP package values</span>
+            <span class="hero-badge">Real business sectors</span>
+            <span class="hero-badge">Guided local support</span>
           </div>
         </div>
         <div class="hero-panel reveal">
@@ -92,30 +98,55 @@
         </div>
       </section>
 
-      <section class="why-us section">
+      <section class="why-us section" id="trust">
         <div class="section-heading reveal">
-          <span class="eyebrow">Why choose us?</span>
-          <h2>Simple, transparent, and business-focused</h2>
+          <span class="eyebrow">Start With Trust</span>
+          <h2>Designed to feel clear, grounded, and easy to follow</h2>
           <p>
-            We present opportunities in clear peso values, easy-to-understand timelines,
-            and a polished experience that feels dependable from first visit to inquiry.
+            Before people invest, they want confidence. This section explains why One World
+            Investment is built to feel transparent, business-backed, and supportive.
           </p>
         </div>
         <div class="why-grid">
           <article class="feature-card reveal">
             <div class="feature-icon">01</div>
-            <h3>Visible package details</h3>
-            <p>Know the amount, duration, estimated return, and slot availability right away.</p>
+            <h3>Transparent package details</h3>
+            <p>See the amount, duration, projected return, and slot count without extra guesswork.</p>
           </article>
           <article class="feature-card reveal">
             <div class="feature-icon">02</div>
-            <h3>Filipino-friendly payments</h3>
-            <p>GCash and meet-up options make onboarding feel familiar and convenient.</p>
+            <h3>Real business sectors</h3>
+            <p>Coffee, gasoline, and jewelry give each opportunity a clearer business story.</p>
           </article>
           <article class="feature-card reveal">
             <div class="feature-icon">03</div>
-            <h3>Backed by real sectors</h3>
-            <p>Coffee, gasoline, and jewelry create a grounded story around the opportunities.</p>
+            <h3>Guided Filipino-friendly support</h3>
+            <p>Built for simple communication, familiar payment options, and approachable follow-up.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="sectors section" id="sectors">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Business Sectors</span>
+          <h2>Opportunities anchored in everyday industries</h2>
+          <p>Short, clear sectors help visitors understand where the business opportunities come from.</p>
+        </div>
+        <div class="sector-grid">
+          <article class="info-card reveal">
+            <div class="sector-icon">&#9749;</div>
+            <h3>Coffee Business</h3>
+            <p>Daily-demand opportunities connected to coffee retail, cafe operations, and repeat customer traffic.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#9981;</div>
+            <h3>Gasoline Business</h3>
+            <p>Business activity linked to transport needs, fuel services, and everyday movement in local communities.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#128141;</div>
+            <h3>Jewelry Business</h3>
+            <p>Premium product opportunities tied to gifting, occasion spending, and value-focused retail demand.</p>
           </article>
         </div>
       </section>
@@ -123,23 +154,11 @@
       <section class="packages section" id="packages">
         <div class="section-heading reveal">
           <span class="eyebrow">Investment Packages</span>
-          <h2>Choose a package that matches your plan</h2>
-          <p>Interactive cards show estimated returns and remaining slots in real time.</p>
+          <h2>Choose the package that fits your next step</h2>
+          <p>These are the strongest starting package options, with peso-based projections and visible slots.</p>
         </div>
         <div class="package-grid">
-          <article class="package-card reveal" data-package="A" data-amount="7000" data-duration="5" data-slots="10">
-            <div class="package-badge">Package A</div>
-            <h3>Starter Growth</h3>
-            <div class="price">&#8369;7,000</div>
-            <ul class="package-list">
-              <li>Returns: &#8369;9,500</li>
-              <li>Duration: 5 Months</li>
-              <li><span class="slots-label">Slots Available: 10</span></li>
-            </ul>
-            <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
-            <button class="primary-btn invest-btn" type="button">Invest Now</button>
-          </article>
-          <article class="package-card featured reveal" data-package="B" data-amount="14000" data-duration="5" data-slots="10">
+          <article class="package-card reveal" data-package="B" data-amount="14000" data-duration="5" data-slots="10">
             <div class="package-badge">Most Popular</div>
             <h3>Balanced Growth</h3>
             <div class="price">&#8369;14,000</div>
@@ -151,12 +170,24 @@
             <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
             <button class="primary-btn invest-btn" type="button">Invest Now</button>
           </article>
-          <article class="package-card reveal" data-package="C" data-amount="21000" data-duration="5" data-slots="10">
-            <div class="package-badge">Package C</div>
+          <article class="package-card featured reveal" data-package="C" data-amount="21000" data-duration="5" data-slots="10">
+            <div class="package-badge">Premium Option</div>
             <h3>Premium Growth</h3>
             <div class="price">&#8369;21,000</div>
             <ul class="package-list">
               <li>Returns: &#8369;29,625</li>
+              <li>Duration: 5 Months</li>
+              <li><span class="slots-label">Slots Available: 10</span></li>
+            </ul>
+            <div class="progress-track"><span class="progress-fill" style="width:100%"></span></div>
+            <button class="primary-btn invest-btn" type="button">Invest Now</button>
+          </article>
+          <article class="package-card reveal" data-package="A" data-amount="7000" data-duration="5" data-slots="10">
+            <div class="package-badge">Starter Entry</div>
+            <h3>Starter Growth</h3>
+            <div class="price">&#8369;7,000</div>
+            <ul class="package-list">
+              <li>Returns: &#8369;9,500</li>
               <li>Duration: 5 Months</li>
               <li><span class="slots-label">Slots Available: 10</span></li>
             </ul>
@@ -168,9 +199,9 @@
 
       <section class="calculator section" id="calculator">
         <div class="section-heading reveal">
-          <span class="eyebrow">Investment Calculator</span>
-          <h2>Estimate your possible return in pesos</h2>
-          <p>Adjust your amount and duration to see a live projection using the sample package yield.</p>
+          <span class="eyebrow">Growth Preview</span>
+          <h2>See how your investment could grow</h2>
+          <p>Adjust your amount and duration to preview a calm, peso-based estimate before you register.</p>
         </div>
         <div class="calculator-grid">
           <form class="calculator-form reveal" id="calculatorForm">
@@ -191,72 +222,30 @@
         </div>
       </section>
 
-      <section class="sectors section" id="sectors">
+      <section class="proof section" id="proof">
         <div class="section-heading reveal">
-          <span class="eyebrow">Business Sectors</span>
-          <h2>Opportunities anchored in everyday industries</h2>
+          <span class="eyebrow">Proof & Snapshot</span>
+          <h2>Clear numbers, structured updates, and familiar support</h2>
+          <p>These proof points help visitors quickly understand the investment experience before taking action.</p>
         </div>
-        <div class="sector-grid">
-          <article class="info-card reveal">
-            <div class="sector-icon">&#9749;</div>
-            <h3>Coffee Business</h3>
-            <p>Support fast-moving caf&eacute; and coffee retail opportunities tied to daily customer demand.</p>
+        <div class="proof-grid">
+          <article class="proof-card reveal">
+            <span class="proof-label">Snapshot</span>
+            <strong>&#8369;29,625</strong>
+            <p>Projected return from the highest sample package after 5 months.</p>
           </article>
-          <article class="info-card reveal">
-            <div class="sector-icon">&#9981;</div>
-            <h3>Gasoline Business</h3>
-            <p>Explore growth through fuel-related operations serving transport and logistics communities.</p>
+          <article class="proof-card reveal">
+            <span class="proof-label">Support Style</span>
+            <strong>Guided and local</strong>
+            <p>GCash and meet-up options keep the process familiar for Filipino investors.</p>
           </article>
-          <article class="info-card reveal">
-            <div class="sector-icon">&#128141;</div>
-            <h3>Jewelry Business</h3>
-            <p>Participate in elegant, high-value product ventures with strong gift and occasion appeal.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="trust-strip section">
-        <div class="trust-grid reveal">
-          <article>
-            <strong>Clear Peso Pricing</strong>
-            <span>All sample values shown in PHP for easy understanding.</span>
-          </article>
-          <article>
-            <strong>Friendly Support Style</strong>
-            <span>Designed to feel welcoming for first-time and returning investors.</span>
-          </article>
-          <article>
-            <strong>Responsive Experience</strong>
-            <span>Works smoothly on mobile, tablet, and desktop screens.</span>
+          <article class="proof-card reveal">
+            <span class="proof-label">Tracking</span>
+            <strong>Dashboard-ready</strong>
+            <p>Login, view package progress, and track active investments in one place.</p>
           </article>
         </div>
-      </section>
-
-      <section class="payments section">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Payment Methods</span>
-          <h2>Convenient options for local investors</h2>
-        </div>
-        <div class="payment-grid">
-          <article class="info-card reveal">
-            <div class="sector-icon">&#128241;</div>
-            <h3>GCash</h3>
-            <p>Fast and familiar digital payments for easy investment coordination and confirmation.</p>
-          </article>
-          <article class="info-card reveal">
-            <div class="sector-icon">&#129309;</div>
-            <h3>Cash Meet-up</h3>
-            <p>A more personal option for investors who prefer arranged, face-to-face transactions.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="dashboard section" id="dashboard-preview">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Investor Dashboard Preview</span>
-          <h2>A clean overview of your active portfolio</h2>
-        </div>
-        <div class="dashboard-preview reveal">
+        <div class="dashboard-preview reveal" id="dashboard-preview">
           <div class="dashboard-top">
             <article class="dashboard-metric"><span>Active Investments</span><strong>3</strong></article>
             <article class="dashboard-metric"><span>Slots Used</span><strong>7 / 30</strong></article>
@@ -280,10 +269,29 @@
         </div>
       </section>
 
+      <section class="payments section">
+        <div class="section-heading reveal">
+          <span class="eyebrow">Payment Methods</span>
+          <h2>Convenient options for local investors</h2>
+        </div>
+        <div class="payment-grid">
+          <article class="info-card reveal">
+            <div class="sector-icon">&#128241;</div>
+            <h3>GCash</h3>
+            <p>Fast and familiar digital payments for easy investment coordination and confirmation.</p>
+          </article>
+          <article class="info-card reveal">
+            <div class="sector-icon">&#129309;</div>
+            <h3>Cash Meet-up</h3>
+            <p>A more personal option for investors who prefer arranged, face-to-face transactions.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="testimonials section">
         <div class="section-heading reveal">
-          <span class="eyebrow">Testimonials</span>
-          <h2>What interested investors might say</h2>
+          <span class="eyebrow">Social Proof</span>
+          <h2>How the experience feels to interested investors</h2>
         </div>
         <div class="testimonial-slider reveal">
           <button class="slider-btn" id="prevTestimonial" aria-label="Previous testimonial">&lsaquo;</button>
@@ -308,7 +316,7 @@
       <section class="faq section" id="faq">
         <div class="section-heading reveal">
           <span class="eyebrow">FAQ</span>
-          <h2>Common questions from investors</h2>
+          <h2>Common questions before making a decision</h2>
         </div>
         <div class="faq-list">
           <details class="faq-item reveal">
@@ -335,6 +343,21 @@
           <span class="eyebrow">Risk Disclosure</span>
           <h2>Important reminder before investing</h2>
           <p>All investments carry risks. Returns are estimates and not guaranteed.</p>
+        </div>
+      </section>
+
+      <section class="final-cta section">
+        <div class="final-cta-card reveal">
+          <span class="eyebrow">Ready To Begin?</span>
+          <h2>Take the next step with clarity and confidence</h2>
+          <p>
+            Review the packages, use the calculator, and create your account when you are ready
+            to continue with a guided investment conversation.
+          </p>
+          <div class="final-cta-actions">
+            <a href="#packages" class="primary-btn">View Packages</a>
+            <button class="secondary-btn modal-trigger" data-modal="registerModal" type="button">Create Account</button>
+          </div>
         </div>
       </section>
 
@@ -471,3 +494,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+

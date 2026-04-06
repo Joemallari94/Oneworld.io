@@ -1,48 +1,51 @@
 :root {
-  --bg: #071833;
-  --bg-soft: #102752;
+  --bg: #0b1530;
+  --bg-soft: #111c3d;
   --surface: #ffffff;
-  --surface-soft: #f4f8fd;
+  --surface-soft: #f7f9fc;
   --surface-strong: #ffffff;
-  --text: #12213d;
-  --muted: #62728f;
-  --heading: #102043;
-  --gold: #d6ac53;
-  --line: rgba(18, 33, 61, 0.1);
-  --line-strong: rgba(18, 33, 61, 0.15);
+  --text: #1b2a4a;
+  --muted: #5c677d;
+  --heading: #162447;
+  --gold: #b9923f;
+  --line: rgba(27, 42, 74, 0.08);
+  --line-strong: rgba(27, 42, 74, 0.12);
   --body-bg:
-    radial-gradient(circle at top left, rgba(214, 172, 83, 0.2), transparent 24%),
-    linear-gradient(180deg, #06142d 0%, #0c2550 28%, #eef4fb 28%, #edf3fb 100%);
-  --sidebar-bg: rgba(6, 20, 45, 0.94);
+    radial-gradient(circle at top left, rgba(185, 146, 63, 0.16), transparent 22%),
+    linear-gradient(180deg, #08142c 0%, #0f2146 22%, #f5f7fa 22%, #edf2f8 100%);
+  --sidebar-bg: rgba(11, 21, 48, 0.92);
   --sidebar-card-bg: rgba(255, 255, 255, 0.08);
-  --sidebar-card-border: rgba(255, 255, 255, 0.1);
+  --sidebar-card-border: rgba(255, 255, 255, 0.12);
   --ghost-bg: rgba(255, 255, 255, 0.08);
   --ghost-color: #ffffff;
-  --field-bg: #f4f8fd;
-  --shadow: 0 22px 60px rgba(7, 24, 51, 0.16);
-  --radius: 24px;
-  --transition: 220ms ease;
+  --field-bg: #f7f9fc;
+  --shadow: 0 18px 42px rgba(15, 27, 56, 0.08);
+  --shadow-soft: 0 10px 26px rgba(15, 27, 56, 0.05);
+  --radius: 28px;
+  --transition: 260ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body[data-theme="dark"] {
-  --surface: #102449;
-  --surface-soft: #132c58;
-  --surface-strong: #193462;
-  --text: #edf3ff;
-  --muted: #aebede;
+  --surface: #1b2a4a;
+  --surface-soft: #22345b;
+  --surface-strong: #263a64;
+  --text: #f4f6fa;
+  --muted: #b8c1d1;
   --heading: #ffffff;
-  --line: rgba(201, 219, 255, 0.12);
-  --line-strong: rgba(201, 219, 255, 0.18);
+  --gold: #c9a44c;
+  --line: rgba(184, 193, 209, 0.12);
+  --line-strong: rgba(184, 193, 209, 0.16);
   --body-bg:
-    radial-gradient(circle at top left, rgba(214, 172, 83, 0.16), transparent 22%),
-    linear-gradient(180deg, #06142d 0%, #0c2550 24%, #09162e 24%, #102448 100%);
-  --sidebar-bg: rgba(5, 18, 41, 0.92);
+    radial-gradient(circle at top left, rgba(201, 164, 76, 0.12), transparent 18%),
+    linear-gradient(180deg, #0b1530 0%, #111c3d 24%, #0f1935 24%, #0f1935 100%);
+  --sidebar-bg: rgba(11, 21, 48, 0.92);
   --sidebar-card-bg: rgba(255, 255, 255, 0.06);
   --sidebar-card-border: rgba(255, 255, 255, 0.08);
   --ghost-bg: rgba(255, 255, 255, 0.08);
   --ghost-color: #ffffff;
-  --field-bg: #132c58;
-  --shadow: 0 24px 70px rgba(3, 10, 22, 0.35);
+  --field-bg: rgba(255, 255, 255, 0.06);
+  --shadow: 0 20px 50px rgba(3, 10, 22, 0.3);
+  --shadow-soft: 0 12px 32px rgba(3, 10, 22, 0.22);
 }
 
 * {
@@ -54,6 +57,7 @@ body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--text);
   background: var(--body-bg);
+  line-height: 1.7;
   transition: background var(--transition), color var(--transition);
 }
 
@@ -75,13 +79,22 @@ select {
 .dashboard-shell {
   display: grid;
   grid-template-columns: 300px 1fr;
+  gap: 1.5rem;
+  width: min(1320px, calc(100% - 2rem));
   min-height: 100vh;
+  margin: 0 auto;
+  padding: 1.5rem 0 2rem;
 }
 
 .sidebar {
-  padding: 2rem 1.25rem;
+  padding: 1.6rem 1.25rem;
   background: var(--sidebar-bg);
   color: #fff;
+  border-radius: calc(var(--radius) + 4px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
   transition: background var(--transition);
 }
 
@@ -142,29 +155,33 @@ select {
 .ghost-btn,
 .primary-btn {
   min-height: 46px;
-  padding: 0.85rem 1.2rem;
+  padding: 0.92rem 1.25rem;
   border-radius: 999px;
   border: 0;
   cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
 }
 
 .ghost-btn {
   background: var(--ghost-bg);
   color: var(--ghost-color);
-  transition:
-    background var(--transition),
-    color var(--transition),
-    transform var(--transition);
 }
 
 .primary-btn {
   background: linear-gradient(135deg, var(--gold), #efca74);
   color: #081a38;
   font-weight: 800;
+  box-shadow: 0 12px 26px rgba(185, 146, 63, 0.18);
+}
+
+.ghost-btn:hover,
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
 }
 
 .dashboard-main {
-  padding: 2rem;
+  padding: 1.2rem 0 0;
 }
 
 .dashboard-header {
@@ -172,7 +189,7 @@ select {
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .dashboard-header h1,
@@ -181,6 +198,7 @@ select {
   margin: 0.85rem 0 0;
   font-family: "Playfair Display", serif;
   color: var(--heading);
+  letter-spacing: -0.03em;
 }
 
 .summary-grid,
@@ -197,7 +215,7 @@ select {
 .panel,
 .investment-item,
 .empty-state {
-  padding: 1.4rem;
+  padding: 1.55rem;
   background: var(--surface);
   border: 1px solid var(--line-strong);
   transition: background var(--transition), border-color var(--transition), color var(--transition);
@@ -214,16 +232,17 @@ select {
 .summary-card strong {
   display: block;
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .panel-grid {
   grid-template-columns: 360px 1fr;
-  margin-top: 1.5rem;
+  margin-top: 1.8rem;
+  align-items: start;
 }
 
 .panel-heading {
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .investment-form label {
@@ -237,7 +256,7 @@ select {
   margin-bottom: 1rem;
   padding: 0.95rem 1rem;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 18px;
   background: var(--field-bg);
   color: var(--text);
   transition: background var(--transition), border-color var(--transition), color var(--transition);
@@ -276,6 +295,13 @@ select {
   margin-top: 1rem;
 }
 
+.meta-line {
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: var(--surface-soft);
+  border: 1px solid var(--line);
+}
+
 .meta-line strong {
   display: block;
   margin-top: 0.25rem;
@@ -308,6 +334,14 @@ select {
   .summary-grid {
     grid-template-columns: 1fr;
   }
+
+  .dashboard-shell {
+    padding-top: 1rem;
+  }
+
+  .sidebar {
+    position: static;
+  }
 }
 
 @media (max-width: 720px) {
@@ -323,5 +357,10 @@ select {
 
   .dashboard-header {
     display: grid;
+  }
+
+  .dashboard-shell {
+    width: min(100%, calc(100% - 1rem));
+    gap: 1rem;
   }
 }
