@@ -6,7 +6,7 @@
   --surface-soft: #f7f9fc;
   --surface-strong: #ffffff;
   --text: #1b2a4a;
-  --muted: #5c677d;
+  --muted: #41526f;
   --heading: #162447;
   --gold: #b9923f;
   --gold-deep: #977528;
@@ -21,7 +21,7 @@
   --nav-text: rgba(244, 246, 250, 0.86);
   --nav-subtle: rgba(233, 239, 248, 0.72);
   --field-bg: #f7f9fc;
-  --field-border: rgba(27, 42, 74, 0.1);
+  --field-border: rgba(27, 42, 74, 0.14);
   --shadow: 0 18px 42px rgba(15, 27, 56, 0.08);
   --shadow-soft: 0 10px 26px rgba(15, 27, 56, 0.05);
   --radius: 28px;
@@ -457,6 +457,42 @@ select {
 .contact-card p,
 .footer p {
   color: var(--muted);
+}
+
+/* Light-mode contrast tune-up for sections with pale backgrounds. */
+body:not([data-theme="dark"]) .why-us .section-heading p,
+body:not([data-theme="dark"]) .sectors .section-heading p,
+body:not([data-theme="dark"]) .packages .section-heading p,
+body:not([data-theme="dark"]) .calculator .section-heading p,
+body:not([data-theme="dark"]) .proof .section-heading p,
+body:not([data-theme="dark"]) .payments .section-heading p,
+body:not([data-theme="dark"]) .faq .section-heading p,
+body:not([data-theme="dark"]) .legal .section-heading p,
+body:not([data-theme="dark"]) .contact .section-heading p,
+body:not([data-theme="dark"]) .feature-card p,
+body:not([data-theme="dark"]) .info-card p,
+body:not([data-theme="dark"]) .proof-card p,
+body:not([data-theme="dark"]) .faq-item p,
+body:not([data-theme="dark"]) .contact-card p,
+body:not([data-theme="dark"]) .legal-card p,
+body:not([data-theme="dark"]) .package-list,
+body:not([data-theme="dark"]) .calculator-note,
+body:not([data-theme="dark"]) .input-hint,
+body:not([data-theme="dark"]) .dashboard-metric span,
+body:not([data-theme="dark"]) .table-head,
+body:not([data-theme="dark"]) .proof-label {
+  color: var(--text);
+}
+
+body:not([data-theme="dark"]) .table-row,
+body:not([data-theme="dark"]) .dashboard-metric strong,
+body:not([data-theme="dark"]) .calculator-results strong,
+body:not([data-theme="dark"]) .table-row span,
+body:not([data-theme="dark"]) .testimonial strong,
+body:not([data-theme="dark"]) .faq-item summary,
+body:not([data-theme="dark"]) .contact-form label,
+body:not([data-theme="dark"]) .modal-form label {
+  color: var(--heading);
 }
 
 .section-heading h2,

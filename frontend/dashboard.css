@@ -5,11 +5,11 @@
   --surface-soft: #f7f9fc;
   --surface-strong: #ffffff;
   --text: #1b2a4a;
-  --muted: #5c677d;
+  --muted: #41526f;
   --heading: #162447;
   --gold: #b9923f;
-  --line: rgba(27, 42, 74, 0.08);
-  --line-strong: rgba(27, 42, 74, 0.12);
+  --line: rgba(27, 42, 74, 0.1);
+  --line-strong: rgba(27, 42, 74, 0.14);
   --body-bg:
     radial-gradient(circle at top left, rgba(185, 146, 63, 0.16), transparent 22%),
     linear-gradient(180deg, #08142c 0%, #0f2146 22%, #f5f7fa 22%, #edf2f8 100%);
@@ -227,6 +227,24 @@ select {
 .feedback,
 .empty-state {
   color: var(--muted);
+}
+
+body:not([data-theme="dark"]) .summary-card span,
+body:not([data-theme="dark"]) .panel-heading p,
+body:not([data-theme="dark"]) .meta-line span,
+body:not([data-theme="dark"]) .feedback,
+body:not([data-theme="dark"]) .empty-state,
+body:not([data-theme="dark"]) .investment-form label {
+  color: var(--text);
+}
+
+body:not([data-theme="dark"]) .summary-card strong,
+body:not([data-theme="dark"]) .investment-item h3,
+body:not([data-theme="dark"]) .meta-line strong,
+body:not([data-theme="dark"]) .dashboard-header h1,
+body:not([data-theme="dark"]) .panel h2,
+body:not([data-theme="dark"]) .sidebar-card h2 {
+  color: var(--heading);
 }
 
 .summary-card strong {
